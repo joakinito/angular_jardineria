@@ -1,0 +1,19 @@
+<div class="Container_listas">
+  <h2>LISTA PODASETOS</h2>
+  <ul>
+    <li
+      *ngFor="let plant of plants"
+      [ngClass]="{ favorite: plant.favorite }"
+      class="texto"
+    >
+      {{ plant.name }} - {{ plant.type }}
+      <button (click)="onDelete(plant)">Eliminar</button>
+      <button
+        (click)="onToggleFavorite(plant)"
+        [class.favorite-button]="plant.favorite"
+      >
+        <span>{{ plant.favorite ? "Quitar Favorito" : "Favorito" }}</span>
+      </button>
+    </li>
+  </ul>
+</div>

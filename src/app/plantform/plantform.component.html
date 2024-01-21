@@ -1,0 +1,26 @@
+<div class="container_form">
+  <input
+    placeholder="nombre"
+    type="text"
+    id="name"
+    [(ngModel)]="newPlant.name"
+  />
+
+  <br />
+
+  <img
+    src="../../assets/images/Seagrass_JE1_BE2.gif"
+    alt="Arbusto"
+    (click)="onTypeChange('Arbusto')"
+  />
+  <img
+    src="../../assets/images/1616989894_142875_gif-url.gif"
+    alt="Árbol"
+    (click)="onTypeChange('Árbol')"
+  />
+
+  <br />
+
+  <button (click)="onClear()">Borrar</button>
+  <button (click)="onSave()">Guardar</button>
+</div>

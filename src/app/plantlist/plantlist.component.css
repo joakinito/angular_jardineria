@@ -1,0 +1,20 @@
+/* Aplica fondo amarillo al elemento de la lista cuando está en favoritos */
+.favorite {
+    color: yellowgreen;
+  }
+
+  .Container_listas{
+    border-style: ridge;
+   border-color: blue;
+    width: 25%;
+   text-align: center;
+   
+  }
+  .texto{
+    list-style: none;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }
+ 
+  
