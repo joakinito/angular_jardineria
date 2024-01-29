@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { PlantFormComponent } from './plantform/plantform.component';
 import { PlantListComponent } from './plantlist/plantlist.component';
 import { Plant, PlantAddedEvent, PlantDeletedEvent, PlantToggledFavoriteEvent } from './interfaces/plant.interface';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone:true,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports:[PlantFormComponent,PlantListComponent,]
+  imports:[PlantFormComponent,PlantListComponent,RouterModule]
 })
 export class AppComponent {
   title = 'FP JARDINERIA';

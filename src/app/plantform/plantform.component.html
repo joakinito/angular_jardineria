@@ -1,26 +1,47 @@
-<div class="container_form">
-  <input
-    placeholder="nombre"
-    type="text"
-    id="name"
-    [(ngModel)]="newPlant.name"
-  />
+<div
+  class="w-96 p-4 bg-gradient-to-r from-blue-300 to-purple-400 text-white rounded-t-lg shadow-lg"
+>
+  <div class="mb-4">
+    <label class="text-lg text-white">Introduce el nombre y el tipo:</label>
+  </div>
 
-  <br />
+  <div class="flex items-center justify-between mb-4">
+    <input
+      class="flex-grow py-2 px-4 border rounded mr-2 bg-white text-gray-800"
+      placeholder="Nombre"
+      type="text"
+      id="name"
+      [(ngModel)]="newPlant.name"
+    />
+    <div class="flex">
+      <img
+        class="cursor-pointer w-9 h-9 focus:ring focus:ring-blue-500"
+        src="../../assets/images/Seagrass_JE1_BE2.gif"
+        alt="Arbusto"
+        (click)="onTypeChange('Arbusto')"
+      />
+      <img
+        class="cursor-pointer w-9 h-9 ml-2 focus:ring focus:ring-blue-500"
+        src="../../assets/images/1616989894_142875_gif-url.gif"
+        alt="Árbol"
+        (click)="onTypeChange('Árbol')"
+      />
+    </div>
+  </div>
 
-  <img
-    src="../../assets/images/Seagrass_JE1_BE2.gif"
-    alt="Arbusto"
-    (click)="onTypeChange('Arbusto')"
-  />
-  <img
-    src="../../assets/images/1616989894_142875_gif-url.gif"
-    alt="Árbol"
-    (click)="onTypeChange('Árbol')"
-  />
-
-  <br />
-
-  <button (click)="onClear()">Borrar</button>
-  <button (click)="onSave()">Guardar</button>
+  <div class="flex justify-center">
+    <button
+      class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded mr-2"
+      (click)="onClear()"
+    >
+      Borrar
+    </button>
+    <button
+      routerLink="/lista"
+      class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded"
+      (click)="onSave()"
+    >
+      Guardar
+    </button>
+  </div>
 </div>

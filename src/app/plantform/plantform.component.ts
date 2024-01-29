@@ -1,15 +1,17 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Plant, PlantAddedEvent } from '../interfaces/plant.interface';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-plantform',
   standalone: true,
-  imports: [ FormsModule],
+  imports: [ FormsModule,RouterModule],
   templateUrl: './plantform.component.html',
   styleUrl: './plantform.component.css'
 })
 export class PlantFormComponent {
+  
   @Output() plantAdded = new EventEmitter<PlantAddedEvent>();
 
   newPlant: Plant = { name: '', type: '', favorite: false };

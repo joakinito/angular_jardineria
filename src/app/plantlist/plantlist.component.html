@@ -1,19 +1,29 @@
-<div class="Container_listas">
-  <h2>LISTA PODASETOS</h2>
+<div
+  class="w-96 p-4 bg-gradient-to-r from-blue-300 to-purple-400 text-white rounded-b-lg"
+>
+  <h2 class="text-3xl font-bold mb-4 text-center">LISTA DE PLANTAS</h2>
+
   <ul>
     <li
       *ngFor="let plant of plants"
-      [ngClass]="{ favorite: plant.favorite }"
-      class="texto"
+      [ngClass]="{ 'text-yellow-500': plant.favorite }"
+      class="py-2 px-4 mb-2 flex items-center justify-between border rounded"
     >
-      {{ plant.name }} - {{ plant.type }}
-      <button (click)="onDelete(plant)">Eliminar</button>
-      <button
-        (click)="onToggleFavorite(plant)"
-        [class.favorite-button]="plant.favorite"
-      >
-        <span>{{ plant.favorite ? "Quitar Favorito" : "Favorito" }}</span>
-      </button>
+      <div class="text-xl">{{ plant.name }} - {{ plant.type }}</div>
+      <div class="space-x-2">
+        <button
+          class="text-red-500 hover:text-red-700"
+          (click)="onDelete(plant)"
+        >
+          Eliminar
+        </button>
+        <button
+          class="text-blue-500 hover:text-blue-700"
+          (click)="onToggleFavorite(plant)"
+        >
+          {{ plant.favorite ? "Quitar Favorito" : "Favorito" }}
+        </button>
+      </div>
     </li>
   </ul>
 </div>
