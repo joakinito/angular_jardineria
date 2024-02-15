@@ -24,7 +24,7 @@ export class PlantListComponent {
   onToggleFavorite(plant: Plant) {
     plant.favorite = !plant.favorite;
     this.plantToggledFavorite.emit({ plant });
-    //papa
+    //papas
     
   }
 }
